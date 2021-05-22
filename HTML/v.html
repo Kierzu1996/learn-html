@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="keywords" content="JavaScript, CSS, HTML">
+      <meta name="description" content="Divs">
+      <meta name="author" content="Lukasz Kierzek">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <base href="https://en.wikipedia.org/" target="_blank">
+
+      <title>Classes div span</title>
+
+      <style>
+        .heavyBomber {
+          background-color: tomato;
+          color: white;
+          border: 2px solid black;
+          margin: 20px;
+          padding: 20px;
+        }
+
+        .note {
+          font-size: 120%;
+          font-style: italic;
+        }
+      </style>
+
+      <script>
+          function change() {
+              document.getElementById("B-17").style.fontSize = "45px";
+              document.getElementById("B-17").style.color = "#ddd";
+              document.getElementById("B-17").style.backgroundColor = "#aaa";
+          }
+
+          function changeReturn() {
+              document.getElementById("B-17").style.fontSize = "100%";
+              document.getElementById("B-17").style.color = "white";
+              document.getElementById("B-17").style.backgroundColor = "tomato";
+          }
+      </script>
+
+      <noscript>Sorry, your browser does not support JavaScript!</noscript>
+    </head>
+    <body>
+        <section>
+          <!--Heavy bombers-->
+          <article>
+            <div class="heavyBomber ">
+              <h2>B-17</h2>
+              <p id="B-17">B-17 Flying Fortress</p>
+              <a href="wiki/Boeing_B-17_Flying_Fortress">Link to Wikipedia!</a>
+            </div>
+          </article>
+
+          <article>
+            <div class="heavyBomber">
+              <h2>B-24</h2>
+              <p>B-24 <span class="note">Liberator</span></p>
+              <a href="wiki/Consolidated_B-24_Liberator">Link to Wikipedia!</a>
+            </div>
+          </article>
+
+          <article>
+            <div class="heavyBomber">
+              <h2>B-29</h2>
+              <p>B-29 Super Fortress</p>
+              <a href="wiki/Boeing_B-29_Superfortress">Link to Wikipedia!</a>
+            </div>
+          </article>
+        </section>
+
+        <button type="button" onclick="change()">Click me!</button>
+        <button type="button" onclick="changeReturn()">Return!</button>
+    </body>
+</html>
