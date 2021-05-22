@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="FORM">
+    <meta name="description" content="I learn form in HTML">
+    <title>Froms</title>
+
+    <base href="https://www.w3schools.com">
+  </head>
+  <body>
+    <!-- Form for Personalia -->
+    <form action="/action_page.php" autocomplete="on" accept-charset="UTF-8">
+      <fieldset>
+        <legend>Personalia</legend>
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="first-name" value="John" size="30"><br>
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="last-name" value="Smith"><br><br>
+
+        <label for="tanks">Choose tanks</label>
+        <select id="tanks" name="tanks" size="2" multiple>
+          <option value="abrams">Abrams</option>
+          <option value="leopard">Leopard</option>
+          <option value="leclerc" selected>Leclerk</option>
+        </select><br><br>
+
+        <label for="message">Text us something</label><br>
+        <textarea name="message" id="message" style="width: 200px; height: 200px;">The tank is in garden</textarea><br>
+
+        <button type="button" onclick="alert('Hello!')">Click me!</button>
+
+        <br><br><input type="submit" value="Submit">
+      </fieldset>
+    </form>
+
+    <!-- Form for something -->
+    <form action="/action_page.php" accept-charset="UTF-8">
+      <fieldset>
+        <legend>Ships</legend>
+        <input list="ships" name="ships">
+        <datalist id="ships">
+          <option value="aircraft">
+          <option value="destroyer">
+        </datalist>
+
+        <br><br><label for="quantity">Quantity between 1 and 5</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="5">
+
+        <br><br><input type="submit" value="Submit">
+      </fieldset>
+    </form>
+
+    <!-- Form for next -->
+    <form action="/action_page.php" accept-charset="UTF-8" id="form_next">
+      <fieldset>
+        <legend>Next</legend>
+        <label for="files">Select file:</label>
+        <input type="file" id="files" name="files" multiple>
+
+        <label for="country_code">Country code:</label>
+        <input type="text" id="country_code" name="country-code" pattern="[A-Za-z]{3}" title="Three letter country code" placeholder="PLN">
+
+        <br><br><input type="submit" formtarget="_blank" value="Submit">
+      </fieldset>
+    </form>
+    <label for="sname">sname:</label>
+    <input type="text" id="sname" name="sname" form="form_next">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores deleniti eius explicabo perferendis sequi
+      sunt. Alias dignissimos enim ipsam iure! Aspernatur, ducimus eligendi. Harum in minus reiciendis tenetur
+      totam.</p>
+
+  </body>
+</html>
+
